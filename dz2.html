@@ -1,0 +1,140 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+    // var a = 1, b = 1, c, d;
+    // c = ++a; alert(c);           // 2  с=a(1)+1 ,alert=C 
+    // d = b++; alert(d);           // 1  d=b ,alert ,b=1+1
+    //  c = (2 + ++a); alert(c);      // 5  c= 2 + (a(2) + 1), alert=C 
+    //  d = (2 + b++); alert(d);      // 4  d= 2 + b, alert=d , b=2+1
+    //  alert(a);                    // 3 a=3
+    //  alert(b);                    // 3 b=3
+
+
+
+    //  var a = 2;
+    //  var x = 1 + (a *= 2);   // a = a(2) * a(2)
+    //  alert(a);
+
+
+
+    // #3
+    function checkNum(c) {
+        var z = (c % 2 == 0) ? 0 : 1;
+        return z;
+
+    }
+
+    var a = +prompt('Введи число!');
+    var b = +prompt('Еще одно!');
+    var x = checkNum(a);
+    var y = checkNum(b);
+    var l = 0;
+    if (x + y == 0) {
+        l = a / b;
+    } else if (x + y == 2) {
+        l = a * b;
+    } else {
+        l = a + b;
+    }
+    console.log(l);
+
+    //#4
+    var a = +prompt('Введи число от 0 до 15!');
+    switch (a) {
+        case 0:
+            console.log(0);
+        case 1:
+            console.log(1);
+        case 2:
+            console.log(2);
+        case 3:
+            console.log(3);
+        case 4:
+            console.log(4);
+        case 5:
+            console.log(5);
+        case 6:
+            console.log(6);
+        case 7:
+            console.log(7);
+        case 8:
+            console.log(8);
+        case 9:
+            console.log(9);
+        case 10:
+            console.log(10);
+        case 11:
+            console.log(11);
+        case 12:
+            console.log(12);
+        case 13:
+            console.log(13);
+        case 14:
+            console.log(14);
+        case 15:
+            console.log(15);
+        default:
+            break;
+    }
+
+    //#5
+    function summ(a, b) {
+        var z = a + b;
+        return z;
+    }
+    function vichit(a, b) {
+        var z = a - b;
+        return z;
+    }
+    function del(a, b) {
+        var z = a / b;
+        return z;
+    }
+    function umnj(a, b) {
+        var z = a * b;
+        return z;
+    }
+    var a = +prompt('Введи число!');
+    var b = +prompt('Еще одно!');
+    console.log(summ(a, b))
+    console.log(vichit(a, b))
+    console.log(del(a, b))
+    console.log(umnj(a, b))
+
+    //#6
+    function mathOperation(arg1, arg2, operation) {
+        var l = 0;
+        if (operation == '+') {
+            l = arg1 + arg2;
+        } else if (operation == '-') {
+            l = arg1 - arg2;
+        } else if (operation == '*') {
+            l = arg1 * arg2;
+        } else if (operation == '/') {
+            l = arg1 / arg2;
+        } else {
+            alert('Непонимаю!');
+        }
+        return l;
+    }
+    var arg1 = +prompt('Введи число!');
+    var arg2 = +prompt('Еще одно!');
+    var operation = prompt('Что делаем с числами? введи +,-,/,*');
+    console.log(mathOperation(arg1, arg2, operation));
+
+    //#7 почитал в инете, про 
+    // alert(null > 0);  // (1) false
+    // alert(null == 0); // (2) false
+    // alert(null >= 0); // (3) true
+
+    //#8
+    function power(val, pow) {
+        if (pow == 1)
+            return 1;
+        else
+            return power(pow - 1) * val;
+    }
+    var val = +prompt('Введи число!');
+    var pow = +prompt('А теперь степень!');
+    console.log(power(val, pow))
+</script>
