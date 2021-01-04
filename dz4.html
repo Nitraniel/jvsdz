@@ -1,0 +1,64 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+
+    //#1
+    function numToObj(x) {
+        if (x > 999) {
+            console.log('Число больше 999')
+        }
+        else {
+            let i = x % 10;
+            let y = parseInt((x % 100) / 10);
+            let u = parseInt((x % 1000) / 100);
+            this.one = i;
+            this.ten = y;
+            this.hundred = u;
+        }
+    }
+
+    let Obj12 = [];
+
+    let z = +prompt();
+    Obj12.push(new numToObj(z));
+
+    console.log(Obj12);
+
+    //#2
+
+    var coke = {
+        company: "coca-cola",
+        volume: 0.5,
+        price: 50,
+    }
+
+    var pepsi = {
+        company: "pepsi",
+        volume: 2,
+        price: 120,
+    }
+
+    var rich = {
+        company: "coca-cola",
+        volume: 1,
+        price: 140,
+    }
+
+    function countBasketPrice() {
+        var sum = 0;
+        for (i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
+        }
+        return sum
+    }
+
+
+
+    let cart = [];
+    cart.push(coke.price, pepsi.price, rich.price)
+    cart.push(pepsi.price)
+    cart.push(rich.price)
+    console.log(cart)
+
+    console.log(countBasketPrice(...cart));
+</script>
